@@ -1,0 +1,2 @@
+# Filled in during Phase 2: postgres (pgvector), searxng, and ollama under a "gpu" profile.
+services: {}

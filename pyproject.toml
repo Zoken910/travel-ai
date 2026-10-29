@@ -1,0 +1,43 @@
+[project]
+name = "travel-ai"
+version = "0.0.1"
+description = "Local-first AI travel planner: Ollama + MCP servers + Streamlit + PostgreSQL"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Zoken910", email = "arizakenzo@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.20.1",
+    "httpx>=0.28.1",
+    "mcp>=2.3.0",
+    "ollama>=0.6.3",
+    "psycopg[binary]>=3.3.6",
+    "pydantic>=2.14.1",
+    "sqlalchemy>=2.1.6",
+    "streamlit>=1.66.1",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.7.0",
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]
+
+[tool.uv]
+# An application, not a library: top-level folders (app/, orchestrator/, db/, ...)
+# are imported directly, so there is no package to build.
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

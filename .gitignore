@@ -218,3 +218,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- travel-ai ---
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+
+# Editors / OS
+.vscode/*
+!.vscode/mcp.json
+.idea/
+.DS_Store
+Thumbs.db
