@@ -52,5 +52,6 @@ uv run pre-commit run --all-files
 
 ## Notes
 
-- Tool-calling smoke test (`get_weather` with `qwen3:8b`): _TODO: record whether the model calls
-  the tool reliably._
+- Tool-calling smoke test (`get_weather` with `qwen3:8b`): passed, the model called the tool
+  (2026-10-29).
+- Docker Desktop isn't installed yet; it's needed from Phase 2 on.
